@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/backColor"
+    tools:context=".fragments.AddPetsProfileFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="1033dp"
+        android:background="@color/backColor"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/backColor"
+        tools:layout_editor_absoluteY="-160dp" />
+
+    <EditText
+        android:id="@+id/etNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="Кличка"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPetView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Вид"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/etNickname"
+        app:layout_constraintTop_toBottomOf="@+id/etNickname" />
+
+    <EditText
+        android:id="@+id/etPoroda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Порода"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/etPetView"
+        app:layout_constraintTop_toBottomOf="@+id/etPetView" />
+
+    <Button
+        android:id="@+id/addPetBut"
+        android:layout_width="172dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="Добавить"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/etPoroda"
+        app:layout_constraintTop_toBottomOf="@+id/etPoroda" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="@color/cardColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backImBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:src="@android:drawable/ic_menu_revert"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

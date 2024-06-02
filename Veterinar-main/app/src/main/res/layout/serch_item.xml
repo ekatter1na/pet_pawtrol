@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:backgroundTint="@color/backPanelColor"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="@color/backPanelColor">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Иванов"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOtz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4,7"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tvprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/moreInfBt"
+            android:layout_width="136dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/buttonColor"
+            android:text="Подробнее"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/zapBut"
+            android:layout_width="136dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/buttonColor"
+            android:text="Записаться"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/moreInfBt"
+            app:layout_constraintTop_toBottomOf="@+id/moreInfBt" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Оценка:"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Цена:"
+            app:layout_constraintStart_toEndOf="@+id/tvOtz"
+            app:layout_constraintTop_toTopOf="@+id/tvOtz" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="р"
+            app:layout_constraintStart_toEndOf="@+id/tvprice"
+            app:layout_constraintTop_toTopOf="@+id/tvprice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

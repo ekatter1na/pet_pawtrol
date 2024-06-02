@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pets">#9C009688</color>
+    <color name="cardColor">#FAEDCD</color>
+    <color name="backColor">#FEFAE0</color>
+    <color name="buttonColor">#D4A373</color>
+    <color name="backPanelColor">#E9EDC9</color>
+    <color name="tableConColor">#CCD5AE</color>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/autorizationFragment">
+
+    <fragment
+        android:id="@+id/autorizationFragment"
+        android:name="com.example.pet_pawtrol.fragments.AutorizationFragment"
+        android:label="fragment_autorization"
+        tools:layout="@layout/fragment_autorization" >
+        <action
+            android:id="@+id/action_autorizationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_autorizationFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.pet_pawtrol.fragments.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_autorizationFragment"
+            app:destination="@id/autorizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.pet_pawtrol.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <argument
+            android:name="ProfileId"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_profileFragment_to_addPetsProfileFragment"
+            app:destination="@id/addPetsProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.pet_pawtrol.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_autorizationFragment"
+            app:destination="@id/autorizationFragment" />
+        <argument
+            android:name="UserID" />
+        <argument
+            android:name="UserArray"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_searchFragment_to_moreInformationFragment"
+            app:destination="@id/moreInformationFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_makeAnAppointmentFragment"
+            app:destination="@id/makeAnAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPetsProfileFragment"
+        android:name="com.example.pet_pawtrol.fragments.AddPetsProfileFragment"
+        android:label="fragment_add_pets_profile"
+        tools:layout="@layout/fragment_add_pets_profile" >
+        <action
+            android:id="@+id/action_addPetsProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="id_user"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreInformationFragment"
+        android:name="com.example.pet_pawtrol.fragments.MoreInformationFragment"
+        android:label="fragment_more_information"
+        tools:layout="@layout/fragment_more_information" >
+        <action
+            android:id="@+id/action_moreInformationFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <argument
+            android:name="urlProfile"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_moreInformationFragment_to_makeAnAppointmentFragment"
+            app:destination="@id/makeAnAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/makeAnAppointmentFragment"
+        android:name="com.example.pet_pawtrol.fragments.MakeAnAppointmentFragment"
+        android:label="fragment_make_an_appointment"
+        tools:layout="@layout/fragment_make_an_appointment" >
+        <action
+            android:id="@+id/action_makeAnAppointmentFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <argument
+            android:name="veterinarName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.pet_pawtrol.fragments.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" >
+        <action
+            android:id="@+id/action_appointmentFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/backColor"
+    tools:context=".fragments.RegistrationFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="1033dp"
+        android:background="@color/backColor"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/backColor"
+        tools:layout_editor_absoluteY="-52dp" />
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Фамилия"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Имя"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberEditText"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Телефон"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/loginEditText"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberEditText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
+    <EditText
+        android:id="@+id/loginEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Логин"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <Button
+        android:id="@+id/regButtton"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="Регистрация"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dubPasEditText"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <ImageButton
+        android:id="@+id/imgButtonAut"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="1dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pasEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/loginEditText"
+        app:layout_constraintTop_toBottomOf="@+id/loginEditText" />
+
+    <EditText
+        android:id="@+id/dubPasEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Повторите пароль"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/pasEditText"
+        app:layout_constraintTop_toBottomOf="@+id/pasEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

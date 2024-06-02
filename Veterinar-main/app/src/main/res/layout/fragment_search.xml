@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="1033dp"
+        android:background="@color/backColor"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/backColor" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/cardColor"
+        android:backgroundTint="@color/cardColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backImBt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_revert"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/profImBt"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/filterImBt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="10dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/filtericon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/profImBt"
+                app:layout_constraintStart_toEndOf="@+id/backImBt"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filterCardView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="По цене:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/sortByPriceAButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text="Сначало дешёвые"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <Button
+                android:id="@+id/sortByPriceDButt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text=" Сначала дорогие "
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="@+id/sortByPriceAButton"
+                app:layout_constraintTop_toBottomOf="@+id/sortByPriceAButton" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="По оценке:"
+                app:layout_constraintStart_toEndOf="@+id/sortByPriceAButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/sortByRatingAButt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text=" Сначала низкие "
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <Button
+                android:id="@+id/sortByRatingDButt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text="Сначала высокие"
+                app:cornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="@+id/sortByRatingAButt"
+                app:layout_constraintTop_toBottomOf="@+id/sortByRatingAButt" />
+
+            <Button
+                android:id="@+id/cancelButt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="-35dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text="Отмена"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/sortByRatingDButt"
+                app:layout_constraintTop_toBottomOf="@+id/sortByPriceDButt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backColor"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tLSearch"
+                android:layout_width="690dp"
+                android:layout_height="49dp"
+                android:background="@color/tableConColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIconTint="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabTextColor="@color/black">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Все" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ветеринар" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Кинолог" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Грумер" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Дерматолог"
+                    tools:layout_editor_absoluteX="278dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Зоопсихолг" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Диетолог" />
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

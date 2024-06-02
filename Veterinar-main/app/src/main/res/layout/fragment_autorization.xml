@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/backColor"
+    tools:context=".fragments.AutorizationFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="1033dp"
+        android:background="@color/backColor"
+        android:backgroundTint="@color/backColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/backColor"
+        tools:layout_editor_absoluteY="-118dp" />
+
+    <EditText
+        android:id="@+id/loginEditText"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="254dp"
+        android:ems="10"
+        android:hint="Логин"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="148dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:backgroundTint="@color/buttonColor"
+        android:text="Регистрация"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/enterButt"
+        app:layout_constraintTop_toBottomOf="@+id/enterButt" />
+
+    <Button
+        android:id="@+id/enterButt"
+        android:layout_width="148dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="Вход"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/pasEditText"
+        app:layout_constraintTop_toBottomOf="@+id/pasEditText" />
+
+    <EditText
+        android:id="@+id/pasEditText"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/loginEditText"
+        app:layout_constraintTop_toBottomOf="@+id/loginEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
